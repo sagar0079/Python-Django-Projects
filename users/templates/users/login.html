@@ -1,0 +1,34 @@
+{% extends 'demo_app/base.html' %}
+
+{% block body %}
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-4 offset-md-4">
+            <div class="card">
+                <form action="" method="POST"></form>
+                <div class="mb-3 text-center">
+                    <label class="form-label bg-warning">Log In</label>
+                    {% csrf_token %}
+                    {% for field in form %}
+
+                    <div class="mb-3 text-center">
+                        {{field.name}}
+                        {{field}}
+                    </div>
+
+                    {% endfor %}
+                    <button type="submit" class="btn btn-primary">Login</button>
+                </div>
+
+                </form>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+
+
+{% endblock %}

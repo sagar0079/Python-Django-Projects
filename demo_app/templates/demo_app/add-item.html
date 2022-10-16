@@ -1,0 +1,35 @@
+{% extends 'demo_app/base.html' %}
+{% block body %}
+<!-- <form method="POST">
+    {% csrf_token %}
+    {{form.as_p}}
+    <button type="submit">Save</button>
+</form> -->
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-4 offset-md-4">
+            <div class="card">
+                <form action="" method="POST"></form>
+                <div class="mb-3 text-center">
+                    <label class="form-label bg-warning">ADD Items</label>
+                    {% csrf_token %}
+                    {% for field in form %}
+
+                    <div class="mb-3 text-center">
+                        {{field.name}}<br>
+                        {{field}}
+                    </div>
+
+                    {% endfor %}
+                    <button type="submit" class="btn btn-primary">ADD</button>
+                </div>
+
+                </form>
+            </div>
+        </div>
+
+    </div>
+</div>
+{% endblock %}

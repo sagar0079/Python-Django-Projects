@@ -1,0 +1,36 @@
+{% extends 'demo_app/base.html' %}
+
+{% block body %}
+<!-- <form action="" method="post">
+    {% csrf_token %}
+    {{form}}
+    <input class="btn" type="submit">
+</form> -->
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-4 offset-md-4">
+            <div class="card">
+                <form action="" method="POST"></form>
+                <div class="mb-3 text-center">
+                    <label class="form-label bg-warning">Register</label>
+                    {% csrf_token %}
+                    {% for field in form %}
+
+                    <div class="mb-3 text-center">
+                        {{field.name}}<br>
+                        {{field}}
+                    </div>
+
+                    {% endfor %}
+                    <button type="submit" class="btn btn-primary">SignUp</button>
+                </div>
+
+                </form>
+            </div>
+        </div>
+
+    </div>
+</div>
+{% endblock %}

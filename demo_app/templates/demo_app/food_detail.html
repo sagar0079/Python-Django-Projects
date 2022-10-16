@@ -1,0 +1,25 @@
+{% extends 'demo_app/base.html' %}
+
+{% block body %}
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 mt-2">
+            <img src="{{ item.item_image }}" class="card" width="500" alt="">
+        </div>
+        <div class="col-md-6">
+            <h1>{{ item.item_name }}</h1>
+            <h2>Description :- </h2>
+            <p style="margin-left: 50px">{{ item.item_desc }}</p>
+            <h3>Price = {{ item.item_price }} Rs</h3>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+{% endblock %}
